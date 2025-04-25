@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.geometry.Pos?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.*?>
+
+<StackPane xmlns="http://javafx.com/javafx/8.0.171"
+           xmlns:fx="http://javafx.com/fxml"
+           fx:controller="controller.LoginController"
+           style="-fx-background-color: rgb(0,44,92);">
+
+    <VBox alignment="CENTER" spacing="20">
+        <!-- Logo + Title -->
+        <VBox alignment="CENTER" spacing="8">
+            <ImageView fitHeight="80" fitWidth="200">
+                <image>
+                    <Image url="@../images/logo_white.png" preserveRatio="true" />
+                </image>
+            </ImageView>
+            <VBox alignment="CENTER" spacing="0">
+                <Label text="Chemical Inventory"
+                       style="-fx-text-fill: white; -fx-font-size: 24px; -fx-font-family: 'Georgia';" />
+                <Label text="Management System"
+                       style="-fx-text-fill: white; -fx-font-size: 24px; -fx-font-family: 'Georgia';" />
+            </VBox>
+        </VBox>
+
+        <!-- Login Card -->
+        <VBox alignment="CENTER" spacing="12"
+              maxWidth="340" style="-fx-background-color: white; -fx-padding: 25; -fx-background-radius: 10;">
+            <Label text="Username" />
+            <TextField fx:id="usernameField" promptText="Enter your username" maxWidth="260"/>
+
+            <Label text="Password" />
+            <PasswordField fx:id="passwordField" promptText="Enter your password" maxWidth="260"/>
+
+            <Button text="Log In" onAction="#handleLogin" maxWidth="160"
+                    style="-fx-background-color: rgb(104,136,72); -fx-text-fill: white; -fx-font-weight: bold; -fx-background-radius: 6;" />
+        </VBox>
+    </VBox>
+
+</StackPane>

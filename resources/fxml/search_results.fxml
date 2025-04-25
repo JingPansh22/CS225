@@ -1,0 +1,22 @@
+
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox xmlns="http://javafx.com/javafx/8"
+      xmlns:fx="http://javafx.com/fxml"
+      spacing="10" alignment="TOP_LEFT"
+      styleClass="module-pane" style="-fx-padding: 20;">
+
+    <Label text="Results" style="-fx-font-size: 18px; -fx-text-fill: #68894A; -fx-font-weight: bold;" />
+
+    <TableView fx:id="resultsTable" prefHeight="600" >
+        <columns>
+            <TableColumn text="Name" />
+            <TableColumn text="CAS Number" />
+            <TableColumn text="Barcode" />
+            <TableColumn text="Location" />
+        </columns>
+    </TableView>
+
+</VBox>
