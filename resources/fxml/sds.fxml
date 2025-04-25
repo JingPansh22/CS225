@@ -4,5 +4,5 @@
 <?import javafx.scene.layout.StackPane?>
 
 <StackPane xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml">
-    <Label text="SDS and File Storage Module Loaded" />
+    <Label text="SDS and File Storage model Loaded" />
 </StackPane>

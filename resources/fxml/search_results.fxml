@@ -12,11 +12,15 @@
 
     <TableView fx:id="resultsTable" prefHeight="600" >
         <columns>
-            <TableColumn text="Name" />
-            <TableColumn text="CAS Number" />
-            <TableColumn text="Barcode" />
-            <TableColumn text="Location" />
+            <TableColumn fx:id="nameColumn" text="Name" prefWidth="150"/>
+            <TableColumn fx:id="manufacturerColumn" text="Manufacturer" prefWidth="150"/>
+            <TableColumn fx:id="unitColumn" text="Unit" prefWidth="100"/>
+            <TableColumn fx:id="quantityColumn" text="Quantity" prefWidth="100"/>
+            <TableColumn fx:id="locationColumn" text="Location" prefWidth="150"/>
+            <TableColumn fx:id="hazardColumn" text="Hazard" prefWidth="150"/>
+            <TableColumn fx:id="expiryColumn" text="Expiry Date" prefWidth="120"/>
         </columns>
+
     </TableView>
 
 </VBox>

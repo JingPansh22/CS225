@@ -1,32 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<!-- ✅ 本文件只负责中间内容区域，不含顶栏和侧边栏 -->
-<VBox xmlns="http://javafx.com/javafx/8"
-      xmlns:fx="http://javafx.com/fxml"
-      fx:controller="controller.SearchController"
-      spacing="20" alignment="TOP_LEFT"
-      styleClass="module-pane" style="-fx-padding: 40;">
+<AnchorPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="fxml.Search"
+            prefHeight="400.0" prefWidth="600.0">
 
-    <Label text="Search By" style="-fx-font-size: 22px; -fx-text-fill:  #68894A; -fx-font-weight: bold;" />
-
-    <Label text="Name" />
-    <TextField fx:id="nameField" promptText="Chemical Name" styleClass="textfield-short" />
-
-    <Label text="CAS Number" />
-    <TextField fx:id="casField" promptText="CAS Registry Number" styleClass="textfield-short" />
-
-    <Label text="Barcode" />
-    <TextField fx:id="barcodeField" promptText="Chemical Barcode" styleClass="textfield-short" />
-
-    <Label text="Location" />
-    <HBox spacing="10">
-        <TextField fx:id="locationField" promptText="Storage Room" styleClass="textfield-short" />
-        <Button fx:id="searchBtn" text="Search" styleClass="topbar-button" />
-        <Button fx:id="advancedSearchBtn" text="Advanced Search" styleClass="secondary-button" />
-
-    </HBox>
-
-</VBox>
+</AnchorPane>
