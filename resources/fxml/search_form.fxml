@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox xmlns="http://javafx.com/javafx/8"
+      xmlns:fx="http://javafx.com/fxml"
+      fx:controller="controller.SearchController"
+      spacing="20" alignment="TOP_LEFT">
+
+    <Label text="Search By" style="-fx-font-size: 22px; -fx-text-fill: #68894A; -fx-font-weight: bold;" />
+    <Label text="Name" />
+    <TextField fx:id="nameField" promptText="Chemical Name" />
+    <Label text="CAS Number" />
+    <TextField fx:id="casField" promptText="CAS Registry Number" />
+    <Label text="Barcode" />
+    <TextField fx:id="barcodeField" promptText="Chemical Barcode" />
+    <Label text="Location" />
+    <TextField fx:id="locationField" promptText="Storage Room" />
+    <Button text="Search" onAction="#handleSearch"/>
+</VBox>

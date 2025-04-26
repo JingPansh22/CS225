@@ -1,37 +1,73 @@
 package controller;
 
 import javafx.fxml.FXML;
-import javafx.scene.control.Button;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Node;
+import javafx.scene.control.Label;
+import javafx.scene.control.TableView;
 import javafx.scene.control.TextField;
+import javafx.scene.layout.VBox;
+
+import java.io.IOException;
+import java.net.URL;
 
 public class SearchController {
 
-    @FXML private TextField nameField;
-    @FXML private TextField casField;
-    @FXML private TextField barcodeField;
-    @FXML private TextField locationField;
-
-    @FXML private Button searchBtn;
-    @FXML private Button advancedSearchBtn;
+    @FXML private VBox moduleLeft;
+    @FXML private VBox moduleRight;
 
     @FXML
     public void initialize() {
-        // 初始化时给按钮添加点击事件监听器
-        searchBtn.setOnAction(event -> handleSearch());
-        advancedSearchBtn.setOnAction(event -> handleAdvancedSearch());
-    }
+        // load left module
+        loadSubview("search_form.fxml", moduleLeft);
 
+        // loadright module
+        loadSubview("search_results.fxml", moduleRight);
+
+        // debug
+        System.out.println("Loading search_form.fxml into moduleLeft");
+        loadSubview("search_form.fxml", moduleLeft);
+        System.out.println("Loading search_results.fxml into moduleRight");
+        loadSubview("search_results.fxml", moduleRight);
+
+    }
+    @FXML
     private void handleSearch() {
-        // 点击 Search 按钮时，打印当前所有输入框内容
-        System.out.println("[Search] Name: " + nameField.getText());
-        System.out.println("[Search] CAS Number: " + casField.getText());
-        System.out.println("[Search] Barcode: " + barcodeField.getText());
-        System.out.println("[Search] Location: " + locationField.getText());
+        // 处理搜索逻辑
+        System.out.println("Search button clicked!");
+    }
+    /**
+     *  fxml --> VBox
+     */
+    private void loadSubview(String fxmlFile, VBox targetBox) {
+        try {
+            String path = "fxml/" + fxmlFile;
+            System.out.println("Trying to load: " + path);  // debug
+
+            // i am working on form/results fxml
+            if ("search_form.fxml".equals(fxmlFile)) {
+                targetBox.getChildren().clear();
+                targetBox.getChildren().add(new Label("Placeholder for search form"));
+            } else if ("search_results.fxml".equals(fxmlFile)) {
+                targetBox.getChildren().clear();
+                targetBox.getChildren().add(new Label("Placeholder for search results"));
+            } else {
+
+                URL resource = getClass().getClassLoader().getResource(path);
+                if (resource == null) {
+                    throw new IOException("Resource not found: " + path);
+                }
+
+                FXMLLoader loader = new FXMLLoader(resource);
+                Node content = loader.load();
+                targetBox.getChildren().clear();
+                targetBox.getChildren().add(content);
+            }
+        } catch (IOException e) {
+            e.printStackTrace();
+            System.err.println("Failed to load: " + fxmlFile);
+        }
     }
 
-    private void handleAdvancedSearch() {
-        // 点击 Advanced Search 按钮时，打印提示信息
-        System.out.println("[Advanced Search] Opening advanced search options...");
-    }
 }
 

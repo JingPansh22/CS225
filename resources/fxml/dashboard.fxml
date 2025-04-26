@@ -41,8 +41,9 @@
     <!-- center become HBox to divide tow modules -->
     <center>
         <HBox spacing="0">
-            <VBox fx:id="moduleLeft" styleClass="module-left" />
-            <VBox fx:id="moduleRight" styleClass="module-right" />
+            <VBox fx:id="moduleLeft" prefWidth="600" prefHeight="600" styleClass="module-left"/>
+            <VBox fx:id="moduleRight" prefWidth="800" prefHeight="600" styleClass="module-right"/>
+
         </HBox>
     </center>
 </BorderPane>

@@ -68,32 +68,30 @@
     -fx-text-fill: #333;
 }
 
-/* === 通用输入框样式（新增部分） === */
-
-/* 默认输入框（适合搜索页面） */
+/* default */
 .textfield-default {
     -fx-pref-width: 500;
     -fx-font-size: 14px;
     -fx-background-radius: 4;
 }
 
-/* 短输入框（适合 storage room 等短字段） */
+/* for short */
 .textfield-short {
     -fx-pref-width: 200;
 }
 
-/* 宽输入框（适合搜索框等） */
+/* for wide */
 .textfield-wide {
     -fx-pref-width: 700;
 }
 
-/* Add Container 页面专用输入框 */
+/* Add Container */
 .add-container-field {
     -fx-pref-width: 450;
     -fx-background-color: white;
 }
 
-/* SDS 页面专用输入框 */
+/* SDS */
 .sds-input {
     -fx-pref-width: 550;
     -fx-border-color: #ccc;
