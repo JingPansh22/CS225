@@ -9,14 +9,12 @@ import java.net.URL;
 
 public class SearchController {
 
-    @FXML private VBox moduleLeft, moduleRight;  // 左右两个模块区域
+    @FXML private VBox moduleLeft, moduleRight;  // 2 modules
 
     @FXML
     public void initialize() {
-        // 加载左侧的 form.fxml
-        loadModule("search_form.fxml", moduleLeft);
 
-        // 加载右侧的 results.fxml
+        loadModule("search_form.fxml", moduleLeft);
         loadModule("search_results.fxml", moduleRight);
 
     }
