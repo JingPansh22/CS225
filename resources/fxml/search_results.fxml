@@ -1,10 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?import javafx.scene.layout.VBox?>
-<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
 
 <VBox xmlns="http://javafx.com/javafx/8"
       xmlns:fx="http://javafx.com/fxml"
-      spacing="10">
-    <Label text="✅ Results loaded!" />
-</VBox>
+      spacing="10"
+      alignment="TOP_LEFT"
+      style="-fx-padding: 20; -fx-background-color: transparent;">
 
+    <!-- 右边：显示查询结果的表格 -->
+    <TableView fx:id="resultsTable" prefWidth="800" prefHeight="600">
+        <!-- 注意！列（TableColumn）是由 SearchController 运行时动态创建的，所以这里不需要预先写列 -->
+    </TableView>
+
+</VBox>
